@@ -2,12 +2,14 @@ import java.awt.*;
 import javax.swing.*;
 
 public class Rules extends JFrame {
+    String name;
+    Rules(String name){
+        this.name=name;
 
-    Rules(){
         getContentPane().setBackground(Color.WHITE);
         setLayout(null);
 
-        JLabel heading=new JLabel("Rules");
+        JLabel heading=new JLabel("Welcome "+ name +" to Simple minds");
         heading.setBounds(50, 20, 700, 30);
         heading.setFont(new Font("Viner Hand ITC",Font.BOLD,28));
         heading.setForeground(new Color(91,35,142));
@@ -19,6 +21,6 @@ public class Rules extends JFrame {
     }
     
     public static void main(String[] args) {
-        new Rules();
+        new Rules("User");
     }
 }
