@@ -1,15 +1,22 @@
 import java.awt.*;
+import java.awt.event.*;
 import javax.swing.*;
 
-public class Quiz extends JFrame {
+public class Quiz extends JFrame implements ActionListener{
     
     String questions[][] = new String[10][5];
     String answers[][] = new String[10][2];
+    ButtonGroup groupoptions;
+    String useranswers[][]=new String[10][1];
 
     JLabel qno,question;
     JRadioButton opt1,opt2,opt3,opt4;
+    JButton next,lifeline,submit;
     public static int timer=15;
     public static int ans_given=0;
+    public static int count =0;
+    public static int score=0;
+    
 
 
     Quiz(){
@@ -128,38 +135,94 @@ public class Quiz extends JFrame {
         opt4.setFont(new Font("Dialog", Font.PLAIN, 20));
         add(opt4);
 
-        ButtonGroup groupoptions=new ButtonGroup();
+        groupoptions=new ButtonGroup();
         groupoptions.add(opt1);
         groupoptions.add(opt2);
         groupoptions.add(opt3);
         groupoptions.add(opt4);
 
-        JButton next=new JButton("Next");
+        next=new JButton("Next");
         next.setBounds(1100, 550, 200, 40);
         next.setFont(new Font("Tahoma", Font.PLAIN, 22));
         next.setBackground(new Color(30,144,255));
         next.setForeground(Color.WHITE);
+        next.addActionListener(this);
         add(next);
 
-        JButton lifeline=new JButton("50-50 LifeLine");
+        lifeline=new JButton("50-50 LifeLine");
         lifeline.setBounds(1100, 630, 200, 40);
         lifeline.setFont(new Font("Tahoma", Font.PLAIN, 22));
         lifeline.setBackground(new Color(30,144,255));
         lifeline.setForeground(Color.WHITE);
+        lifeline.addActionListener(this);
         add(lifeline);
 
-        JButton submit=new JButton("Submit");
+        submit=new JButton("Submit");
         submit.setBounds(1100, 710, 200, 40);
         submit.setFont(new Font("Tahoma", Font.PLAIN, 22));
         submit.setBackground(new Color(30,144,255));
         submit.setForeground(Color.WHITE);
+        submit.addActionListener(this);
         submit.setEnabled(false);
         add(submit);
 
-        start(0);
+        start(count);
 
         setVisible(true);
 
+    }
+    public void actionPerformed(ActionEvent ae){
+        if(ae.getSource()==next){
+            repaint();
+            opt1.setEnabled(true);
+            opt2.setEnabled(true);
+            opt3.setEnabled(true);
+            opt4.setEnabled(true);
+            
+            ans_given=1;
+            if(groupoptions.getSelection()==null){
+                useranswers[count][0]="";
+            }else{
+                useranswers[count][0]=groupoptions.getSelection().getActionCommand();
+            }
+
+            if(count==8){
+                next.setEnabled(false);
+                submit.setEnabled(true);
+            }
+
+            count++;
+            start(count);
+        }
+        else if(ae.getSource()==lifeline){
+            if(count==2||count==4||count==6||count==8||count==9){
+                opt2.setEnabled(false);
+                opt3.setEnabled(false);
+            }else{
+                opt1.setEnabled(false);
+                opt4.setEnabled(false);
+            }
+            lifeline.setEnabled(false);
+        }
+        else if (ae.getSource()==submit){
+            ans_given=1;
+            if(count==9){
+                if (groupoptions.getSelection()==null){
+                    useranswers[count][0] = "";
+                }
+                  else{
+                    useranswers[count][0] = groupoptions.getSelection().getActionCommand();
+                  }
+                  for(int i=0;i<useranswers.length;i++){
+                    if(useranswers[i][0].equals(answers[i][1])){
+                        score += 10;
+                    }else{
+                        score+=0;
+                    }
+                  }
+                  setVisible(false);
+                }
+            }
     }
 
     public void paint(Graphics g){
@@ -191,23 +254,62 @@ public class Quiz extends JFrame {
         }
         else if(timer<0){
             timer=15;
-            
+            opt1.setEnabled(true);
+            opt2.setEnabled(true);
+            opt3.setEnabled(true);
+            opt4.setEnabled(true);
+
+            if(count==8){
+                next.setEnabled(false);
+                submit.setEnabled(true);
+            }
+            if(count==9){
+                if (groupoptions.getSelection()==null){
+                    useranswers[count][0] = "";
+                }
+                  else{
+                    useranswers[count][0] = groupoptions.getSelection().getActionCommand();
+                  }
+                  for(int i=0;i<useranswers.length;i++){
+                    if(useranswers[i][0].equals(answers[i][1])){
+                        score += 10;
+                    }else{
+                        score+=0;
+                    }
+                  }
+                  setVisible(false);
+
+
+            }else{
+                if (groupoptions.getSelection()==null){
+                    useranswers[count][0] = "";
+                }
+                  else{
+                    useranswers[count][0] = groupoptions.getSelection().getActionCommand();
+                  }
+                  count++;
+                  start(count);
+            }       
         }
     }
 
     public void start(int count){
         qno.setText(""+(count+1)+". ");
         question.setText(questions[count][0]);
-        opt1.setText(questions[count][1]);
-        // opt1.setActionCommand(questions[count][1]);
-        opt2.setText(questions[count][2]);
-        // opt2.setActionCommand(questions[count][2]);
-        opt3.setText(questions[count][3]);
-        // opt3.setActionCommand(questions[count][3]);
-        opt4.setText(questions[count][4]);
-        // opt4.setActionCommand(questions[count][4]);
 
-        // groupoptions.clearSelection();
+        opt1.setText(questions[count][1]);
+        opt1.setActionCommand(questions[count][1]);
+
+        opt2.setText(questions[count][2]);
+        opt2.setActionCommand(questions[count][2]);
+
+        opt3.setText(questions[count][3]);
+        opt3.setActionCommand(questions[count][3]);
+
+        opt4.setText(questions[count][4]);
+        opt4.setActionCommand(questions[count][4]);
+
+        groupoptions.clearSelection();
     }
 
     public static void main(String[] args) {
