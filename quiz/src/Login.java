@@ -17,7 +17,7 @@ public class Login extends JFrame implements ActionListener{
         add(image);
 
         JLabel heading=new JLabel("Quick Quiz");
-        heading.setBounds(750, 60, 300, 45);
+        heading.setBounds(780, 60, 300, 45);
         heading.setFont(new Font("Georgia",Font.BOLD,40));
         heading.setForeground(new Color(91,35,142));
         add(heading);

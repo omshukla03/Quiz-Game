@@ -16,7 +16,7 @@ public class Score extends JFrame implements ActionListener {
         image.setBounds(0,200 , 300 ,250);
         add(image);
 
-        JLabel heading=new JLabel("Thankyou "+name+" for playing Quick-Quiz");
+        JLabel heading=new JLabel("Thank You "+name+" for playing Quick-Quiz");
         heading.setBounds(45, 30, 700, 30);
         heading.setFont(new Font("Tahoma", Font.PLAIN, 26));
         add(heading);
@@ -28,7 +28,7 @@ public class Score extends JFrame implements ActionListener {
 
         JButton submit=new JButton("Play Again");
         submit.setBounds(380, 270, 120, 30);
-        submit.setBackground(new Color(30,144,255));
+        submit.setBackground(new Color(0, 166, 184));
         submit.setForeground(Color.WHITE);
         submit.addActionListener(this);
         add(submit);
