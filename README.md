@@ -11,6 +11,9 @@ Welcome to **Quick Quiz**, a fun and interactive quiz game built with **Java Swi
 - 🕹️ **Interactive Quiz Rules** for a seamless gameplay setup.
 - 🏆 **Multiple Levels of Questions** to challenge players of all ages.
 - 🎨 **Attractive UI** with eye-catching fonts and themes.
+- ⏳ **Including timer** to each question.
+- 📝 **Include score tracking**.
+
 
 ---
 
