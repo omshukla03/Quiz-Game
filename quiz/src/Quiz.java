@@ -18,8 +18,9 @@ public class Quiz extends JFrame implements ActionListener{
     public static int score=0;
     
 
-
-    Quiz(){
+    String name;
+    Quiz(String name){
+        this.name=name;
         setBounds(50,0,1440,850);
         getContentPane().setBackground(Color.WHITE);
         setLayout(null);
@@ -221,6 +222,7 @@ public class Quiz extends JFrame implements ActionListener{
                     }
                   }
                   setVisible(false);
+                  new Score(name,score);
                 }
             }
     }
@@ -278,7 +280,7 @@ public class Quiz extends JFrame implements ActionListener{
                     }
                   }
                   setVisible(false);
-
+                  new Score(name, score);
 
             }else{
                 if (groupoptions.getSelection()==null){
@@ -313,6 +315,6 @@ public class Quiz extends JFrame implements ActionListener{
     }
 
     public static void main(String[] args) {
-        new Quiz();
+        new Quiz("User");
     }
 }
