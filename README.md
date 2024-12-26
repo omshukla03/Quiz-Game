@@ -1,6 +1,6 @@
-# 🎮 Simple Minds - Quiz Game
+# 🎮 Quick Quiz - Quiz Game
 
-Welcome to **Simple Minds**, a fun and interactive quiz game built with **Java Swing**. Test your knowledge and challenge your brain with this engaging quiz app! 🧠✨
+Welcome to **Quick Quiz**, a fun and interactive quiz game built with **Java Swing**. Test your knowledge and challenge your brain with this engaging quiz app! 🧠✨
 
 ---
 
