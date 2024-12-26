@@ -19,7 +19,7 @@ Welcome to **Simple Minds**, a fun and interactive quiz game built with **Java S
 ![Login Screen] (![image](https://github.com/user-attachments/assets/3c7df7be-48a2-4ba4-aaac-bcc107ca47f4))
 *Login screen where players enter their name.*
 
-![Quiz Rules](![image](https://github.com/user-attachments/assets/ceb4c743-3895-4bd7-bc0f-8d2f0fa80519))  
+![Quiz Rules] ![image](https://github.com/user-attachments/assets/ceb4c743-3895-4bd7-bc0f-8d2f0fa80519)
 *Rules section explaining how to play.*
 
 ---
@@ -36,5 +36,5 @@ Welcome to **Simple Minds**, a fun and interactive quiz game built with **Java S
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-username/quiz-game.git
-   cd quiz-game
+   git clone https://github.com/omshukla03/Quiz-Game
+   cd Quiz-Game
