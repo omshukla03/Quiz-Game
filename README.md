@@ -41,3 +41,26 @@ Welcome to **Quick Quiz**, a fun and interactive quiz game built with **Java Swi
    ```bash
    git clone https://github.com/omshukla03/Quiz-Game
    cd Quiz-Game
+
+---
+
+## 🧑‍💻 Contributing
+**Contributions are always welcome!** Here's how you can help:
+
+- **Fork the repository.**
+- **Create a new branch.**
+- **Make your changes and submit a pull request.**
+
+---
+## 📄 License
+**This project is licensed under the MIT License.**
+
+---
+
+## 📧 Contact
+**For any queries or suggestions, feel free to reach out:**
+
+- **Om Shukla:** work.omshukla@gmail.com
+  
+
+## ⭐ Don't forget to give this project a star if you like it! ⭐
