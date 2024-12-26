@@ -16,7 +16,7 @@ Welcome to **Quick Quiz**, a fun and interactive quiz game built with **Java Swi
 
 ## 📸 Screenshots
 
-![Login Screen] (![image](https://github.com/user-attachments/assets/3c7df7be-48a2-4ba4-aaac-bcc107ca47f4))
+![Login Screen] ![image](https://github.com/user-attachments/assets/3c7df7be-48a2-4ba4-aaac-bcc107ca47f4)
 *Login screen where players enter their name.*
 
 ![Quiz Rules] ![image](https://github.com/user-attachments/assets/ceb4c743-3895-4bd7-bc0f-8d2f0fa80519)
