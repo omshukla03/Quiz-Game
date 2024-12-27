@@ -19,11 +19,22 @@ Welcome to **Quick Quiz**, a fun and interactive quiz game built with **Java Swi
 
 ## 📸 Screenshots
 
-![Login Screen] ![image](https://github.com/user-attachments/assets/3c7df7be-48a2-4ba4-aaac-bcc107ca47f4)
+**Login Screen** ![image](https://github.com/user-attachments/assets/3c7df7be-48a2-4ba4-aaac-bcc107ca47f4)
 *Login screen where players enter their name.*
 
-![Quiz Rules] ![image](https://github.com/user-attachments/assets/ceb4c743-3895-4bd7-bc0f-8d2f0fa80519)
+**Quiz Rules** ![image](https://github.com/user-attachments/assets/ceb4c743-3895-4bd7-bc0f-8d2f0fa80519)
 *Rules section explaining how to play.*
+
+**Quiz Interface** ![Screenshot 2024-12-27 222603](https://github.com/user-attachments/assets/0ed865f5-1d68-4c6a-b60f-f7e5fabcf084)
+*Shows the Question Some Options and Some Button.*
+
+**50-50 LifeLine** ![Screenshot 2024-12-27 222623](https://github.com/user-attachments/assets/1daae7ed-1a05-4fd7-a7a8-b5f8e52d8a4d)
+*It Shows how a LifeLine Works*
+
+**Result Page**
+- ![Screenshot 2024-12-27 222731](https://github.com/user-attachments/assets/98bc9d22-8208-457d-8afc-77b1c665a883)
+*It Shows Your Quiz Score and Play again button*
+
 
 ---
 
